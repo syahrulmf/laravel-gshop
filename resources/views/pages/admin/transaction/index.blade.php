@@ -12,6 +12,7 @@
     <div class="row">
         <div class="card shadow" style="width: 100%">
             <div class="card-body">
+                <a href="{{ route('print-transaction') }}" class="btn btn-primary bg-primary text-white p-2 rounded-lg mb-4">Print Transaction</a>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>

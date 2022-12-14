@@ -39,6 +39,8 @@ Route::prefix('admin')
     ->group(function(){
         Route::get('/', 'DashboardController@index')
             ->name('dashboard');
+        Route::get('/print-transaction', 'TransactionController@printTransaction')
+             ->name('print-transaction');
 
         Route::resource('product', 'ProductController');
         Route::resource('gallery', 'GalleryController');

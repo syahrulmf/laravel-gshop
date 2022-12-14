@@ -26,6 +26,16 @@ class TransactionController extends Controller
         ]);
     }
 
+    public function printTransaction()
+    {
+      $items = Transaction::with([
+            'details', 'product', 'user'
+        ])->get();
+        return view('pages.admin.transaction.print-transaction', [
+            'items' => $items
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
